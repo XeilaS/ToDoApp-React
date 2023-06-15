@@ -4,6 +4,7 @@ import ProfilePage from "../pages/ProfilePage/profile.page";
 import ErrorPage from "../pages/ErrorPage/error.page";
 import Document from "../components/Document";
 import HomePage from "../pages/HomePage/home.page";
+import FreelancePage from "../pages/FreelancePage/freelance.page";
 
 const router = createBrowserRouter([
     {
@@ -25,16 +26,8 @@ const router = createBrowserRouter([
                 element: <ProfilePage />
             },
             {
-                path: "/profile",
-                element: <ProfilePage />
-            },
-            {
-                path: "@issue",
-                element: <h1>Lol</h1>
-            },
-            {
-                path: "*",
-                element: <ErrorPage />
+                path: "/freelancePage",
+                element: <FreelancePage />
             }]
     },
 ])

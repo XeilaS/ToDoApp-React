@@ -4,11 +4,8 @@ function Navbar() {
         <div className="navbar">
             <span><NavLink to="/">Home</NavLink></span>
             <span><NavLink to="/todo">TodoPage</NavLink></span>
-            <span><NavLink to="/profile/@Alexis">@Alexis</NavLink></span>
-            <span><NavLink to="/profile/@Megane">@Megane</NavLink></span>
-            <span><NavLink to="/profile/@Emmanuel">@Emmanuel</NavLink></span >
-        
-
+            <span><NavLink to="/freelancePage">Freelance</NavLink></span>
+            <span><NavLink to="/profile/@Alexis">Mon profil</NavLink></span>
         </div>
     )
 }

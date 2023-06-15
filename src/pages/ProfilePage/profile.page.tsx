@@ -5,7 +5,7 @@ function ProfilePage() {
     const { userTag } = useParams()
     return (
         <div>
-            <h1> {userTag} Page</h1>
+            <h1>Bonjour Alexis</h1>
             <Helmet >
                 <title>profile</title>
                 <meta name="description" content="The profile of someone" />
