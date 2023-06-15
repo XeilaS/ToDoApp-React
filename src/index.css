@@ -103,8 +103,8 @@ button:focus-visible {
   padding: 1rem;
   background-color: rgb(251, 247, 247);
   border-radius: 15px;
-  margin-bottom: 2rem;
   max-width: 500px;
+  margin: 0 auto 2rem;
 
 }
 

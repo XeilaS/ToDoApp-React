@@ -1,8 +1,25 @@
 
 import { Helmet } from "react-helmet";
 import Freelance from "../../components/freelance_box";
+import { useEffect, useState } from "react";
+import UserInterface from "../../interface/user.interface";
+import axios from "axios";
+
+
 
 function FreelancePage() {
+    const [users, setUsers] = useState<UserInterface[]>([])
+    const [loading, setLoading] = useState(true);
+    const loadData = async () => {
+        await axios.get("https://jsonplaceholder.typicode.com/users")
+            .then((reponse) => setUsers(reponse.data))
+        setLoading(false);
+    }
+    useEffect(() => { // premiere fonction à l'execution du dom ? 
+        loadData()
+        return;
+    }, [])
+    if (loading) <h1>Loading...</h1>
     return (
         <div>
             <Helmet >
@@ -13,7 +30,16 @@ function FreelancePage() {
                 Freelance Page
             </h1>
 
-            <Freelance
+            <div>
+                {users.map((user, index) => {
+                    return <Freelance key={index} user={user} />
+                })}
+            </div>
+
+
+
+
+            {/* <Freelance
                 id={1}
                 name={"Le king"}
                 username={"XeilaS"}
@@ -28,7 +54,7 @@ function FreelancePage() {
                     city: "valenciennes",
                     zipcode: "59300"
                 }} />
-
+         */}
 
         </div>
     )
