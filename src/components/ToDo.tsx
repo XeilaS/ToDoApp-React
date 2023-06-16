@@ -3,6 +3,7 @@ interface ToDoProps {
     id?: number,
     title: string,
     isDone: boolean,
+    
 }
 
 function ToDo(props: ToDoProps) {
