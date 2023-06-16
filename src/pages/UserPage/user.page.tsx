@@ -1,6 +1,6 @@
 
 import { Helmet } from "react-helmet";
-import Freelance from "../../components/freelance_box";
+
 import { useEffect, useState } from "react";
 import UserInterface from "../../interface/user.interface";
 import axios from "axios";
@@ -8,8 +8,8 @@ import axios from "axios";
 
 
 function UserPage() {
-    const [users, setUsers] = useState<UserInterface[]>([])
-    
+    const [, setUsers] = useState<UserInterface[]>([])
+
     const loadData = () => {
         axios.get("https://jsonplaceholder.typicode.com/posts/:id")
             .then((reponse) => setUsers(reponse.data))

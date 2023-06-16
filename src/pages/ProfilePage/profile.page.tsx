@@ -1,8 +1,7 @@
-import { useParams } from "react-router-dom"
+
 import { Helmet } from "react-helmet";
 
 function ProfilePage() {
-    const { userTag } = useParams()
     return (
         <div>
             <h1>Bonjour Alexis</h1>
